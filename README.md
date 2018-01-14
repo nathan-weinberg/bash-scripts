@@ -9,7 +9,6 @@ update.sh performs the following tasks:
 - Updates System Package List
 - Upgrades installed packages to latest versions
 - Upgrades openssh server
-- Generates log file
 
 ### Usage
 
@@ -27,7 +26,7 @@ You may need to run the following command first:
 backup.sh performs the following tasks:
 
 - Creates tar file containing a specifed user's home directory
-- Generates log file
+- Saves file to /home/ directory
 
 ### Usage
 backup.sh can be run from the command line as follows:
