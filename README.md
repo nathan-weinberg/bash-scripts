@@ -16,7 +16,7 @@ update.sh can be run from the command line as follows:
 
 `./update.sh`
 
-You may need to run the following command first:
+You will need to run the following command first:
 
 `chmod +x update.sh`
 
@@ -33,7 +33,27 @@ backup.sh can be run from the command line as follows:
 
 `./backup.sh [user]`
 
-You may need to run the following command first:
+You will need to run the following command first:
+
+`chmod +x backup.sh`
+
+## status.sh
+### Purpose
+
+staus.sh displays the following data:
+
+- CPU Info
+- Memory Info
+- Hard Drive Info
+- Partition Info
+- Version
+
+### Usage
+status.sh can be run from the command line as follows:
+
+`./status.sh`
+
+You will need to run the following command first:
 
 `chmod +x backup.sh`
 
