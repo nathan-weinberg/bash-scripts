@@ -4,11 +4,13 @@
 ## update.sh
 ### Purpose
 
-update.sh performs the following tasks:
+update.sh performs the following tasks on Debian/Raspian systems:
 
 - Updates System Package List
 - Upgrades installed packages to latest versions
 - Upgrades openssh server
+
+And does a standard yum update on Fedora.
 
 ### Usage
 
@@ -16,7 +18,7 @@ update.sh can be run from the command line as follows:
 
 `./update.sh`
 
-You will need to run the following command first:
+You may need to run the following command first:
 
 `chmod +x update.sh`
 
@@ -33,7 +35,7 @@ backup.sh can be run from the command line as follows:
 
 `./backup.sh [user]`
 
-You will need to run the following command first:
+You may need to run the following command first:
 
 `chmod +x backup.sh`
 
@@ -46,19 +48,25 @@ staus.sh displays the following data:
 - Memory Info
 - Hard Drive Info
 - Partition Info
-- Version
+- Linux Version Info
 
 ### Usage
 status.sh can be run from the command line as follows:
 
 `./status.sh`
 
-You will need to run the following command first:
+You may need to run the following command first:
 
 `chmod +x backup.sh`
 
 ## Requirements
-These scripts assume a Linux Debian/Raspian OS environment and sudo privileges. update.sh requires an Internet connection.
+These scripts assume sudo privileges and one of the following OS environments:
+
+- Raspbian
+- Debian
+- Fedora
+
+update.sh requires an Internet connection.
 
 ### Automating Scripts with Cron
 

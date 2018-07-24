@@ -2,7 +2,7 @@
 
 source /etc/os-release
 
-if [ $ID == 'raspbian' ]; then
+if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
@@ -28,6 +28,6 @@ elif [ $ID == 'fedora' ]; then
 	sudo yum -y update
 
 else
-    echo "Unknown Distro: $ID"
+	echo "Unknown Distro: $ID"
 
 fi
