@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DISTRO=$(lsb_release -is)
+source /etc/os-release
 
-if [ $DISTRO == 'Raspbian' ]; then
+if [ $ID == 'raspbian' ]; then
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
@@ -20,7 +20,7 @@ if [ $DISTRO == 'Raspbian' ]; then
 	echo "Upgraded ssh server"
 	echo "###################"
 
-elif [ $DISTRO == 'Fedora' ]; then
+elif [ $ID == 'fedora' ]; then
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
@@ -28,6 +28,6 @@ elif [ $DISTRO == 'Fedora' ]; then
 	sudo yum -y update
 
 else
-    echo "Unknown Distro: $DISTRO"
+    echo "Unknown Distro: $ID"
 
 fi
