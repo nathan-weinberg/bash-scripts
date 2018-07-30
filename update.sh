@@ -25,7 +25,7 @@ elif [ $ID == 'fedora' ]; then
 	echo "Last Updated:" $(date)
 	echo "##########################################"
 
-	sudo yum -y update
+	sudo dnf -y update
 
 else
 	echo "Unknown Distro: $ID"
