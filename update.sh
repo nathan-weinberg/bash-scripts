@@ -27,6 +27,13 @@ elif [ $ID == 'fedora' ]; then
 
 	sudo dnf -y update
 
+elif [ $ID == 'rhel' ]; then
+        echo "##########################################"
+        echo "Last Updated:" $(date)
+        echo "##########################################"
+
+	sudo yum -y update
+
 else
 	echo "Unknown Distro: $ID"
 
