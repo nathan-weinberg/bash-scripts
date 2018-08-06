@@ -65,6 +65,7 @@ These scripts assume sudo privileges and one of the following OS environments:
 - Raspbian
 - Debian
 - Fedora
+- Red Hat Enterprise Linux
 
 update.sh requires an Internet connection.
 
