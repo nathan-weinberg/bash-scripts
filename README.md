@@ -39,6 +39,10 @@ You may need to run the following command first:
 
 `chmod +x backup.sh`
 
+### Notes
+
+backup.sh assumes the media drive is mounted under the user that is being backed up; if this is not the case make the nessessarily modfications to the code.
+
 ## status.sh
 ### Purpose
 
