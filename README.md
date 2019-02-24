@@ -28,12 +28,12 @@ You may need to run the following command first:
 backup.sh performs the following tasks:
 
 - Creates tar file containing a specifed user's home directory
-- Saves file to either /home/ directory or a media drive if specified
+- Saves file to either /home/ directory or an alternate destination if specified
 
 ### Usage
 backup.sh can be run from the command line as follows:
 
-`./backup.sh [user] [optional: media destination]`
+`./backup.sh [user] [optional: path/to/destination]`
 
 You may need to run the following command first:
 
