@@ -3,6 +3,9 @@
 # GNOME Tweak Tool
 dnf install -y gnome-tweak-tool
 
+# npm
+dnf install npm
+
 # Thunderbird
 dnf install -y thunderbird
 
