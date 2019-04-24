@@ -6,6 +6,7 @@ if [ ! -d "$1" ]; then
 elif [ $# -eq 2 ]; then
 	if [ ! -d "$2" ]; then
 		echo "Destination does not exist."
+		echo "Last Backup Attempted: " $(date)
 	else
 		sudo tar czf "$1"_home_"$(date +"%m-%d-%Y")".tar.gz "$1"
 		sudo cp "$1"_home_"$(date +"%m-%d-%Y")".tar.gz "$2"
