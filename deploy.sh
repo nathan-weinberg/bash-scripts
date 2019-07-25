@@ -35,3 +35,7 @@ dnf install -y python-vlc
 
 # Redshift
 dnf install -y redshift-gtk
+
+# Adobe Flash
+dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+dnf install flash-plugin alsa-plugins-pulseaudio libcurl
