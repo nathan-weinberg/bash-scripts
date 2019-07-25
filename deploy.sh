@@ -4,7 +4,7 @@
 dnf install -y gnome-tweak-tool
 
 # npm
-dnf install npm
+dnf install -y npm
 
 # Thunderbird
 dnf install -y thunderbird
@@ -14,18 +14,18 @@ dnf install -y snapd
 ln -s /var/lib/snapd/snap /snap
 
 # Spotify
-snap install spotify
+snap install -y spotify
 
 # HexChat
-dnf install hexchat
+dnf install -y hexchat
 
 # Slack
-snap install slack
+snap install -y slack
 
 # Sublime Text 3
 rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-dnf install sublime-text
+dnf install -y sublime-text
 
 # VLC
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -37,5 +37,5 @@ dnf install -y python-vlc
 dnf install -y redshift-gtk
 
 # Adobe Flash
-dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-dnf install flash-plugin alsa-plugins-pulseaudio libcurl
+dnf install -y http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+dnf install -y flash-plugin alsa-plugins-pulseaudio libcurl
