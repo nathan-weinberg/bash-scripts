@@ -7,7 +7,7 @@ cat /proc/cpuinfo
 echo "#######################"
 echo "Memory Info::"
 echo "#######################"
-cat /proc/meminfo
+awk '$3=="kB"{$2=$2/1024**2;$3="GB";} 1' /proc/meminfo | column -t
 echo "#######################"
 echo "Hard Drive Info:"
 echo "#######################"
