@@ -75,4 +75,4 @@ update.sh requires an Internet connection.
 
 ### Automating Scripts with Cron
 
-It is recommended to automate the usage of these scripts using `cron`. 
+It's recommended to automate the usage of these scripts using `cron`. 
