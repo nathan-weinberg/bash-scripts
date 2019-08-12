@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Snap
+# snap
 sudo dnf install -y snapd
 sudo ln -s /var/lib/snapd/snap /snap
 sudo systemctl restart snapd.service
@@ -43,3 +43,8 @@ sudo dnf install -y redshift-gtk
 # Adobe Flash
 sudo dnf install -y http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 sudo dnf install -y flash-plugin alsa-plugins-pulseaudio libcurl
+
+# SSH configuration
+sudo dnf install -y openssh-server
+sudo systemctl enable sshd
+sudo systemctl start sshd

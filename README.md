@@ -91,6 +91,8 @@ You may need to run the following command first:
 - Redshift
 - Adobe Flash
 
+And performs some basic SSH configuration.
+
 ### Usage
 `deploy.sh` can be run from the command line as follows:
 
