@@ -63,7 +63,8 @@ elif [ $ID == 'raspbian' ]; then
 	# Firewall configuration
 	sudo apt install -y ufw
 	sudo ufw enable
-	sudo ufw allow ssh
+	sudo ufw allow 22	# allow ssh
+	sudo ufw allow 5900 # allow vnc
 
 	# Fail2Ban configuration
 	sudo apt install -y fail2ban
