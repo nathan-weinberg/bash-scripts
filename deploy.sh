@@ -2,7 +2,7 @@
 
 source /etc/os-release
 
-if [ $ID == 'fedora' ]; then 
+if [ $ID == 'fedora' ]; then
 
 	# snap
 	sudo dnf install -y snapd
@@ -57,8 +57,8 @@ elif [ $ID == 'raspbian' ]; then
 
 	# SSH configuration
 	sudo apt install -y openssh-server
-	sudo systemctl enable sshd
-	sudo systemctl start sshd
+	sudo systemctl enable ssh
+	sudo systemctl start ssh
 
 	# Firewall configuration
 	sudo apt install -y ufw
