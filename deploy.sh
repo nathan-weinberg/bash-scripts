@@ -53,6 +53,14 @@ if [ $ID == 'fedora' ]; then
 	sudo systemctl enable sshd
 	sudo systemctl start sshd
 
+	# see git branch within terminal
+	echo '## see git branch within terminal
+	git_branch() {
+	  git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
+	}
+
+	export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "' >> ~/.bashrc
+
 elif [ $ID == 'raspbian' ]; then
 
 	# SSH configuration
@@ -79,11 +87,3 @@ else
 	echo "Unknown Distro: $ID"
 
 fi
-
-## see git branch within terminal
-echo '## see git branch within terminal
-git_branch() {
-  git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
-}
-
-export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "' >> ~/.bashrc

@@ -76,7 +76,7 @@ You may need to run the following command first:
 ## deploy.sh
 ### Purpose
 
-`deploy.sh` installs the following applications and does some basic SSH configuration on Fedora:
+`deploy.sh` installs the following applications and does some basic SSH/Terminal configuration on Fedora:
 
 - snap
 - nano
