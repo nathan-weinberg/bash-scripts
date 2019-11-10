@@ -76,7 +76,7 @@ You may need to run the following command first:
 ## deploy.sh
 ### Purpose
 
-`deploy.sh` installs the following applications:
+`deploy.sh` installs the following applications and does some basic SSH configuration on Fedora:
 
 - snap
 - nano
@@ -91,7 +91,12 @@ You may need to run the following command first:
 - Redshift
 - Adobe Flash
 
-And performs some basic SSH configuration.
+It does the following on Raspbian:
+
+- SSH configuation
+- UFW installation and configuration
+- Fail2Ban installation and configuration
+- VNC installation and configuration
 
 ### Usage
 `deploy.sh` can be run from the command line as follows:
@@ -104,7 +109,7 @@ You may need to run the following command first:
 
 ### Notes
 
-Unlike the other scripts in this repository, `deploy.sh` is only configured for/has only been tested on Fedora. No other Operating System is officially supported at this time.
+Unlike the other scripts in this repository, `deploy.sh` is only configured for/has only been tested on Fedora and Raspbian (that has been installed via NOOBS). No other Operating Systems are officially supported at this time.
 
 It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
 
