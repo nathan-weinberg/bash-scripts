@@ -35,6 +35,9 @@ if [ $ID == 'fedora' ]; then
 	sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 	sudo dnf install -y sublime-text
 
+	# Visual Studio Code
+	sudo snap install code --classic 
+
 	# VLC
 	sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
