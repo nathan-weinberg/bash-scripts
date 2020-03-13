@@ -87,6 +87,7 @@ You may need to run the following command first:
 - Hexchat
 - Slack
 - Sublime Text 3
+- Visual Studio Code
 - VLC
 - Redshift
 - Adobe Flash
