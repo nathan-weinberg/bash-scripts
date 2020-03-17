@@ -80,7 +80,9 @@ You may need to run the following command first:
 
 - snap
 - nano
+- tmux
 - GNOME tweak tool
+- KolourPaint
 - npm
 - Thunderbird
 - Spotify
@@ -89,7 +91,6 @@ You may need to run the following command first:
 - Sublime Text 3
 - Visual Studio Code
 - VLC
-- Redshift
 - Adobe Flash
 
 It does the following on Raspbian:
