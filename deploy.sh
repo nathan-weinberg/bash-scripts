@@ -12,6 +12,12 @@ if [ $ID == 'fedora' ]; then
 	# nano
 	sudo dnf install -y nano
 
+	# tmux
+	sudo dnf install -y tmux
+
+	# kolourpaint
+	sudo dnf install -y kolourpainto
+
 	# GNOME Tweak Tool
 	sudo dnf install -y gnome-tweak-tool
 
@@ -36,16 +42,13 @@ if [ $ID == 'fedora' ]; then
 	sudo dnf install -y sublime-text
 
 	# Visual Studio Code
-	sudo snap install code --classic 
+	sudo snap install code --classic
 
 	# VLC
 	sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf install -y vlc
 	sudo dnf install -y python-vlc
-
-	# Redshift
-	sudo dnf install -y redshift-gtk
 
 	# Adobe Flash
 	sudo dnf install -y http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
