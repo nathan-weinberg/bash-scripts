@@ -115,6 +115,22 @@ Unlike the other scripts in this repository, `deploy.sh` is only configured for/
 
 It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
 
+## sync.sh
+### Purpose
+`sync.sh` syncs the files between a source and destination such that the files in the specified destination will be the same as the files in the specified source.
+
+### Usage
+`sync.sh` can be run from the command line as follows:
+
+`$ ./sync.sh [path/to/source] [path/to/destination]`
+
+You may need to run the following command first:
+
+`$ chmod +x sync.sh`
+
+### Notes
+`sync.sh` is just a wrapper for `rsync`; I would recommend looking at the [rsync man page](https://download.samba.org/pub/rsync/rsync.html) if you wish to further customize your syncing options.
+
 ### Automating Scripts with Cron
 
-It is recommended to automate the usage of these scripts (specifically `update.sh` and `backup.sh`) using `cron`. 
+It is recommended to automate the usage of these scripts (specifically `update.sh`, `backup.sh`, and `sync.sh`) using `cron`. 
