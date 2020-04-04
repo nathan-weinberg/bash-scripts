@@ -30,6 +30,9 @@ if [ $ID == 'fedora' ]; then
 	# Spotify
 	sudo snap install spotify
 
+	# Quod Libet
+	sudo dnf install -y quodlibet
+
 	# HexChat
 	sudo dnf install -y hexchat
 
