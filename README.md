@@ -53,10 +53,10 @@ You may need to run the following command first:
 
 It is recommended you use an absolute path for the destination (if you choose to specify one) to reduce the chance of error.
 
-## status.sh
+## system.sh
 ### Purpose
 
-`status.sh` displays the following data:
+`system.sh` displays the following system data:
 
 - CPU Info
 - Memory Info
@@ -65,9 +65,9 @@ It is recommended you use an absolute path for the destination (if you choose to
 - Linux Version Info
 
 ### Usage
-`status.sh` can be run from the command line as follows:
+`system.sh` can be run from the command line as follows:
 
-`$ ./status.sh`
+`$ ./system.sh`
 
 You may need to run the following command first:
 
