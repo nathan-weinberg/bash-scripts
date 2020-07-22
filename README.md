@@ -78,18 +78,18 @@ You may need to run the following command first:
 
 `deploy.sh` installs the following applications and does some basic SSH/Terminal configuration on Fedora:
 
-- snap
+- GNOME tweak tool
 - nano
 - tmux
-- GNOME tweak tool
-- KolourPaint
 - npm
+- KolourPaint
 - Thunderbird
-- Spotify
+- Quod Libet
 - Hexchat
+- flatpak
 - Slack
+- Spotify
 - Sublime Text 3
-- Visual Studio Code
 - VLC
 - Adobe Flash
 

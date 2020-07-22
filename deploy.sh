@@ -4,10 +4,8 @@ source /etc/os-release
 
 if [ $ID == 'fedora' ]; then
 
-	# snap
-	sudo dnf install -y snapd
-	sudo ln -s /var/lib/snapd/snap /snap
-	sudo systemctl restart snapd.service
+	# GNOME Tweak Tool
+	sudo dnf install -y gnome-tweak-tool
 
 	# nano
 	sudo dnf install -y nano
@@ -15,20 +13,14 @@ if [ $ID == 'fedora' ]; then
 	# tmux
 	sudo dnf install -y tmux
 
-	# kolourpaint
-	sudo dnf install -y kolourpainto
-
-	# GNOME Tweak Tool
-	sudo dnf install -y gnome-tweak-tool
-
 	# npm
 	sudo dnf install -y npm
 
+	# KolourPaint
+	sudo dnf install -y kolourpaint
+
 	# Thunderbird
 	sudo dnf install -y thunderbird
-
-	# Spotify
-	sudo snap install spotify
 
 	# Quod Libet
 	sudo dnf install -y quodlibet
@@ -36,16 +28,20 @@ if [ $ID == 'fedora' ]; then
 	# HexChat
 	sudo dnf install -y hexchat
 
+	# flatpak
+	sudo dnf install -y flatpak
+	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 	# Slack
-	sudo snap install slack --classic
+	sudo flatpak install flathub com.slack.Slack
+
+	# Spotify
+	sudo flatpak install flathub com.spotify.Client
 
 	# Sublime Text 3
 	sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 	sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 	sudo dnf install -y sublime-text
-
-	# Visual Studio Code
-	sudo snap install code --classic
 
 	# VLC
 	sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
