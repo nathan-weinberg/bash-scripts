@@ -89,7 +89,7 @@ You may need to run the following command first:
 - flatpak
 - Slack
 - Spotify
-- Sublime Text 3
+- Visual Studio Code
 - VLC
 - Adobe Flash
 
