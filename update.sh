@@ -15,9 +15,9 @@ if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "Upgrade ssh server"
 	echo "###################"
 	sudo apt-get -y install openssh-server
-	echo "##########################################"
+	echo "#############################################"
 	echo "Last Updated:" $(date)
-	echo "##########################################"
+	echo "#############################################"
 
 elif [ $ID == 'fedora' ]; then
 	sudo dnf -y update
