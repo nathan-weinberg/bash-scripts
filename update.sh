@@ -2,7 +2,7 @@
 
 source /etc/os-release
 
-if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
+if [[ $ID == 'raspbian' ]] || [[ $ID == 'debian' ]]; then
 	echo "###########################"
 	echo "Update System Package List"
 	echo "###########################"
@@ -19,13 +19,13 @@ if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "Last Updated:" $(date)
 	echo "#############################################"
 
-elif [ $ID == 'fedora' ]; then
+elif [[ $ID == 'fedora' ]]; then
 	sudo dnf -y update
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
 
-elif [ $ID == 'rhel' ]; then
+elif [[ $ID == 'rhel' ]]; then
 	sudo yum -y update
     echo "##########################################"
     echo "Last Updated:" $(date)

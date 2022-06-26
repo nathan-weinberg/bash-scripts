@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -eq 2 ]; then
+if [[ $# -eq 2 ]]; then
 	rsync -auhvP --delete $1 $2
 	echo "##################################################"
 	echo "Last Sync Occured:" $(date)

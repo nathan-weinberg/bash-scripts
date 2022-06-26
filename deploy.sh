@@ -2,7 +2,7 @@
 
 source /etc/os-release
 
-if [ $ID == 'fedora' ]; then
+if [[ $ID == 'fedora' ]]; then
 
 	# GNOME Tweak Tool
 	sudo dnf install -y gnome-tweak-tool
@@ -67,7 +67,7 @@ if [ $ID == 'fedora' ]; then
 
 	export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "' >> ~/.bashrc
 
-elif [ $ID == 'raspbian' ]; then
+elif [[ $ID == 'raspbian' ]]; then
 
 	# SSH configuration
 	sudo apt install -y openssh-server
