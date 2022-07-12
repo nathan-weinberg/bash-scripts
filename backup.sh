@@ -16,10 +16,8 @@ elif [[ $# -eq 2 ]]; then
 		sudo tar czf "${backupName}" "$1"
 		sudo cp "${backupName}" "$2"
 		sudo rm "${backupName}"
-		echo "Last Backup Generated:" $(date)
     fi
 else
 
     sudo tar czf "${backupName}" "$1"
-    echo "Last Backup Generated:" $(date)
 fi
