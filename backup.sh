@@ -1,5 +1,7 @@
 #!/bin/bash
 
+todayDate='\D{%m-%d-%Y}' backupName="$1_home_${todayDate@P}.tar.gz"
+
 cd /home/
 
 if [[ ! -d "$1" ]]; then
@@ -11,13 +13,13 @@ elif [[ $# -eq 2 ]]; then
 		exit 1
 	else
 
-		sudo tar czf "$1"_home_"$(date +"%m-%d-%Y")".tar.gz "$1"
-		sudo cp "$1"_home_"$(date +"%m-%d-%Y")".tar.gz "$2"
-		sudo rm "$1"_home_"$(date +"%m-%d-%Y")".tar.gz
+		sudo tar czf "${backupName}" "$1"
+		sudo cp "${backupName}" "$2"
+		sudo rm "${backupName}"
 		echo "Last Backup Generated:" $(date)
     fi
 else
 
-    sudo tar czf "$1"_home_"$(date +"%m-%d-%Y")".tar.gz "$1"
+    sudo tar czf "${backupName}" "$1"
     echo "Last Backup Generated:" $(date)
 fi
