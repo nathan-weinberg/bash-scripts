@@ -26,8 +26,7 @@ if [[ $ID == 'fedora' ]]; then
 	sudo dnf install code
 
 	# SSH configuration
-	sudo systemctl enable sshd
-	sudo systemctl start sshd
+	sudo systemctl enable --now sshd
 
 	# see git branch within terminal
 	echo '## see git branch within terminal
@@ -41,8 +40,7 @@ elif [[ $ID == 'raspbian' ]]; then
 
 	# SSH configuration
 	sudo apt install -y openssh-server
-	sudo systemctl enable ssh
-	sudo systemctl start ssh
+	sudo systemctl enable --now ssh
 
 	# Firewall configuration
 	sudo apt install -y ufw
@@ -56,9 +54,7 @@ elif [[ $ID == 'raspbian' ]]; then
 
 	# VNC configuration
 	sudo apt install -y realvnc-vnc-server realvnc-vnc-viewer
-	sudo systemctl enable vncserver-x11-serviced.service
-	sudo systemctl start vncserver-x11-serviced.service
-
+	sudo systemctl enable --now vncserver-x11-serviced.service
 else
 	echo "Unknown Distro: $ID"
 
