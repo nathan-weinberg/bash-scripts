@@ -25,12 +25,16 @@ if [[ $ID == 'fedora' ]]; then
 	sudo systemctl enable --now sshd
 
 	# see git branch within terminal
-	echo '## see git branch within terminal
+	cat >> ~/.bashrc << EOF
 	git_branch() {
-	  git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
+
+        gitBranch="$(git branch --show-current)"
+
+        printf "${gitBranch:-HEAD}"
 	}
 
-	export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "' >> ~/.bashrc
+	export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "'
+EOF
 
 elif [[ $ID == 'raspbian' ]]; then
 
