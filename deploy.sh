@@ -4,32 +4,13 @@ source /etc/os-release
 
 if [[ $ID == 'fedora' ]]; then
 
-	# GNOME Tweak Tool
-	sudo dnf install -y gnome-tweak-tool
+	fedoraPackages=(gnome-tweak-tool nano tmux npm kolourpaint thunderbird quodlibet hexchat flatpak openssh-server flash-plugin alsa-plugins-pulseaudio libcurl vlc python-vlc)
 
-	# nano
-	sudo dnf install -y nano
+	sudo dnf install -y "${fedoraPackages[@]}" \
+                        http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm \
+                        https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+                        https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-	# tmux
-	sudo dnf install -y tmux
-
-	# npm
-	sudo dnf install -y npm
-
-	# KolourPaint
-	sudo dnf install -y kolourpaint
-
-	# Thunderbird
-	sudo dnf install -y thunderbird
-
-	# Quod Libet
-	sudo dnf install -y quodlibet
-
-	# HexChat
-	sudo dnf install -y hexchat
-
-	# flatpak
-	sudo dnf install -y flatpak
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 	# Slack
@@ -44,18 +25,7 @@ if [[ $ID == 'fedora' ]]; then
 	sudo dnf check-update
 	sudo dnf install code
 
-	# VLC
-	sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf install -y vlc
-	sudo dnf install -y python-vlc
-
-	# Adobe Flash
-	sudo dnf install -y http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-	sudo dnf install -y flash-plugin alsa-plugins-pulseaudio libcurl
-
 	# SSH configuration
-	sudo dnf install -y openssh-server
 	sudo systemctl enable sshd
 	sudo systemctl start sshd
 
