@@ -13,11 +13,7 @@ if [[ $ID == 'fedora' ]]; then
 
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-	# Slack
-	sudo flatpak install flathub com.slack.Slack
-
-	# Spotify
-	sudo flatpak install flathub com.spotify.Client
+	sudo flatpak install flathub com.{slack.Slack,spotify.Client}
 
 	# Visual Studio Code
 	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
