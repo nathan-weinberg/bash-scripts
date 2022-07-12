@@ -38,24 +38,23 @@ EOF
 
 elif [[ $ID == 'raspbian' ]]; then
 
+	raspbianPackages=(openssh-server fail2ban ufw realvnc-vnc-server realvnc-vnc-viewer)
+
+	sudo apt install -y "${raspbianPackages[@]}"
+
 	# SSH configuration
-	sudo apt install -y openssh-server
 	sudo systemctl enable --now ssh
 
 	# Firewall configuration
-	sudo apt install -y ufw
 	sudo ufw enable
-	sudo ufw allow 22	# allow ssh
-	sudo ufw allow 5900 # allow vnc
+	sudo ufw allow 22
+	sudo ufw allow 5900
 
 	# Fail2Ban configuration
-	sudo apt install -y fail2ban
 	sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 	# VNC configuration
-	sudo apt install -y realvnc-vnc-server realvnc-vnc-viewer
 	sudo systemctl enable --now vncserver-x11-serviced.service
 else
 	echo "Unknown Distro: $ID"
-
 fi
