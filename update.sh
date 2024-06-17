@@ -1,7 +1,13 @@
 #!/bin/bash
 
+if [[ $1 == '-v' ]]; then
+	echo "===> running in verbose mode"
+    set -x
+fi
+
 source /etc/os-release
 
+# apt-based Operating Systems
 if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "###########################"
 	echo "Update System Package List"
@@ -19,12 +25,14 @@ if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "Last Updated:" $(date)
 	echo "#############################################"
 
+# dnf-based Operating Systems
 elif [ $ID == 'fedora' ]; then
-	sudo dnf -y update
+	sudo dnf -y upgrade
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
 
+# yum-based Operating Systems
 elif [ $ID == 'rhel' ]; then
 	sudo yum -y update
     echo "##########################################"
