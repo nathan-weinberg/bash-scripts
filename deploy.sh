@@ -67,7 +67,7 @@ if [ $ID == 'fedora' ]; then
 
 	export PS1="[\u@\h \W\[\033[00;32m\]\$(git_branch)\[\033[00m\]]\$ "' >> ~/.bashrc
 
-elif [ $ID == 'raspbian' ]; then
+elif [ $ID == 'debian' ]; then
 
 	# SSH configuration
 	sudo apt install -y openssh-server
@@ -78,16 +78,10 @@ elif [ $ID == 'raspbian' ]; then
 	sudo apt install -y ufw
 	sudo ufw enable
 	sudo ufw allow 22	# allow ssh
-	sudo ufw allow 5900 # allow vnc
 
 	# Fail2Ban configuration
 	sudo apt install -y fail2ban
 	sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-
-	# VNC configuration
-	sudo apt install -y realvnc-vnc-server realvnc-vnc-viewer
-	sudo systemctl enable vncserver-x11-serviced.service
-	sudo systemctl start vncserver-x11-serviced.service
 
 else
 	echo "Unknown Distro: $ID"
