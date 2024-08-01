@@ -8,7 +8,7 @@ fi
 source /etc/os-release
 
 # apt-based Operating Systems
-if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
+if [ $ID == 'debian' ]; then
 	echo "###########################"
 	echo "Update System Package List"
 	echo "###########################"
@@ -26,18 +26,11 @@ if [ $ID == 'raspbian' ] || [ $ID == 'debian' ]; then
 	echo "#############################################"
 
 # dnf-based Operating Systems
-elif [ $ID == 'fedora' ]; then
+elif [ $ID == 'fedora' ] || [ $ID == 'rhel' ]; then
 	sudo dnf -y upgrade
 	echo "##########################################"
 	echo "Last Updated:" $(date)
 	echo "##########################################"
-
-# yum-based Operating Systems
-elif [ $ID == 'rhel' ]; then
-	sudo yum -y update
-    echo "##########################################"
-    echo "Last Updated:" $(date)
-    echo "##########################################"
 
 else
 	echo "Unknown Distro: $ID"
