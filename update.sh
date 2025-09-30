@@ -8,7 +8,7 @@ fi
 source /etc/os-release
 
 # apt-based Operating Systems
-if [ $ID == 'debian' ]; then
+if [ $ID == 'debian' ] || [ $ID == 'raspbian' ]; then
 	echo "###########################"
 	echo "Update System Package List"
 	echo "###########################"
