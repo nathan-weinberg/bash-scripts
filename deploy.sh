@@ -75,9 +75,9 @@ elif [ $ID == 'debian' ]; then
 	sudo systemctl start ssh
 
 	# Firewall configuration
-	sudo apt install -y ufw
+	sudo apt install -y ufw rsyslog
+	sudo ufw allow 22	# allow default ssh port
 	sudo ufw enable
-	sudo ufw allow 22	# allow ssh
 
 	# Fail2Ban configuration
 	sudo apt install -y fail2ban
