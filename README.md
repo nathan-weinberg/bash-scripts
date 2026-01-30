@@ -1,7 +1,9 @@
 # Bash Scripts
+
 Collection of scripts used to maintain various Unix systems
 
 ## Requirements
+
 These scripts assume root access and one of the following Linux distros:
 
 - Debian-based
@@ -13,6 +15,7 @@ These scripts assume root access and one of the following Linux distros:
   - CentOS (untested)
 
 ## Contents
+
 - [backup](#backup)
 - [deploy](#deploy)
 - [sync](#sync)
@@ -23,12 +26,14 @@ These scripts assume root access and one of the following Linux distros:
 > `update.sh` and `deploy.sh` require an Internet connection.
 
 ## backup
+
 `backup.sh` performs the following tasks:
 
 - Creates tar file containing a specifed user's home directory
 - Saves file to either the `/home/` directory or an alternate destination if specified
 
 ### Usage
+
 `backup.sh` can be run from the command line as follows:
 
 ```bash
@@ -36,9 +41,11 @@ These scripts assume root access and one of the following Linux distros:
 ```
 
 ### Notes
+
 It is recommended you use an absolute path for the destination (if you choose to specify one) to reduce the chance of error.
 
 ## deploy
+
 `deploy.sh` installs the following applications and does some basic SSH/Terminal configuration on Red Hat-based systems:
 
 - GNOME tweak tool
@@ -63,6 +70,7 @@ It does the following on Debian-based systems:
 - Fail2Ban installation and configuration
 
 ### Usage
+
 `deploy.sh` can be run from the command line as follows:
 
 ```bash
@@ -76,6 +84,7 @@ Unlike the other scripts in this repository, `deploy.sh` is only configured for/
 It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
 
 ## system
+
 `system.sh` displays the following system data:
 
 - CPU Info
@@ -85,6 +94,7 @@ It is recommended you restart your computer after running `deploy.sh` - certain 
 - Linux Version Info
 
 ### Usage
+
 `system.sh` can be run from the command line as follows:
 
 ```bash
@@ -92,9 +102,11 @@ It is recommended you restart your computer after running `deploy.sh` - certain 
 ```
 
 ## sync
+
 `sync.sh` syncs the files between a source and destination such that the files in the specified destination will be the same as the files in the specified source.
 
 ### Usage
+
 `sync.sh` can be run from the command line as follows:
 
 ```bash
@@ -102,9 +114,11 @@ It is recommended you restart your computer after running `deploy.sh` - certain 
 ```
 
 ### Notes
+
 `sync.sh` is just a wrapper for `rsync` - I would recommend looking at the [rsync man page](https://download.samba.org/pub/rsync/rsync.html) if you wish to further customize your syncing options.
 
 ## update
+
 `update.sh` performs the following tasks on Debian-based systems:
 
 - Updates System Package List
@@ -114,6 +128,7 @@ It is recommended you restart your computer after running `deploy.sh` - certain 
 And does a standard `dnf` upgrade on Red Hat-based systems.
 
 ### Usage
+
 update.sh can be run from the command line as follows:
 
 ```bash
