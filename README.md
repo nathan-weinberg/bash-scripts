@@ -40,9 +40,8 @@ These scripts assume root access and one of the following Linux distros:
 ./backup.sh [user] [optional: path/to/destination]
 ```
 
-### Notes
-
-It is recommended you use an absolute path for the destination (if you choose to specify one) to reduce the chance of error.
+> [!CAUTION]
+> It is recommended you use an absolute path for the destination (if you choose to specify one) to reduce the chance of error.
 
 ## deploy
 
@@ -77,29 +76,8 @@ It does the following on Debian-based systems:
 ./deploy.sh
 ```
 
-### Notes
-
-Unlike the other scripts in this repository, `deploy.sh` is only configured for/has only been tested on Fedora and Raspberry Pi OS (formerly Raspbian). No other Operating Systems are officially supported at this time.
-
-It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
-
-## system
-
-`system.sh` displays the following system data:
-
-- CPU Info
-- Memory Info
-- Hard Drive Info
-- Partition Info
-- Linux Version Info
-
-### Usage
-
-`system.sh` can be run from the command line as follows:
-
-```bash
-./system.sh
-```
+> [!IMPORTANT]
+> It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
 
 ## sync
 
@@ -113,9 +91,28 @@ It is recommended you restart your computer after running `deploy.sh` - certain 
 ./sync.sh [path/to/source] [path/to/destination]
 ```
 
-### Notes
+> [!TIP]
+> `sync.sh` is just a wrapper for `rsync` - I would recommend looking at the [rsync man page](https://download.samba.org/pub/rsync/rsync.html) if you wish to further customize your syncing options.
 
-`sync.sh` is just a wrapper for `rsync` - I would recommend looking at the [rsync man page](https://download.samba.org/pub/rsync/rsync.html) if you wish to further customize your syncing options.
+## system
+
+`system.sh` displays the following system data:
+
+- CPU Info
+- GPU Info
+- Memory Info
+- Hard Drive Info
+- Partition Info
+- OS Info
+- Linux Version Info
+
+### Usage
+
+`system.sh` can be run from the command line as follows:
+
+```bash
+./system.sh
+```
 
 ## update
 
@@ -132,5 +129,5 @@ And does a standard `dnf` upgrade on Red Hat-based systems.
 update.sh can be run from the command line as follows:
 
 ```bash
-./update.sh
+./update.sh [optional: -v for verbose mode]
 ```
