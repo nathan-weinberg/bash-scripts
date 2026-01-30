@@ -79,24 +79,6 @@ It does the following on Debian-based systems:
 > [!IMPORTANT]
 > It is recommended you restart your computer after running `deploy.sh` - certain applications may not appear visible until doing so.
 
-## system
-
-`system.sh` displays the following system data:
-
-- CPU Info
-- Memory Info
-- Hard Drive Info
-- Partition Info
-- Linux Version Info
-
-### Usage
-
-`system.sh` can be run from the command line as follows:
-
-```bash
-./system.sh
-```
-
 ## sync
 
 `sync.sh` syncs the files between a source and destination such that the files in the specified destination will be the same as the files in the specified source.
@@ -111,6 +93,26 @@ It does the following on Debian-based systems:
 
 > [!TIP]
 > `sync.sh` is just a wrapper for `rsync` - I would recommend looking at the [rsync man page](https://download.samba.org/pub/rsync/rsync.html) if you wish to further customize your syncing options.
+
+## system
+
+`system.sh` displays the following system data:
+
+- CPU Info
+- GPU Info
+- Memory Info
+- Hard Drive Info
+- Partition Info
+- OS Info
+- Linux Version Info
+
+### Usage
+
+`system.sh` can be run from the command line as follows:
+
+```bash
+./system.sh
+```
 
 ## update
 
@@ -127,5 +129,5 @@ And does a standard `dnf` upgrade on Red Hat-based systems.
 update.sh can be run from the command line as follows:
 
 ```bash
-./update.sh
+./update.sh [optional: -v for verbose mode]
 ```
